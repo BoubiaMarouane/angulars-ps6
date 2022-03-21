@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { QuizService } from '../../../services/quiz.service';
-import { Quiz } from '../../../models/quiz.model';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {QuizService} from '../../../services/quiz.service';
+import {Quiz} from '../../../models/quiz.model';
 
 @Component({
   selector: 'app-quiz-list',
@@ -31,5 +31,10 @@ export class QuizListComponent implements OnInit {
 
   deleteQuiz(quiz: Quiz): void {
     this.quizService.deleteQuiz(quiz);
+  }
+
+  // tslint:disable-next-line:typedef
+  redirectToQuizForm(){
+    this.router.navigateByUrl('/quizform');
   }
 }
