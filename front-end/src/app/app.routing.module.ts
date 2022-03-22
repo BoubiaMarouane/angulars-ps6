@@ -16,13 +16,13 @@ const routes: Routes = [
   {path: 'quizlist', component: QuizListComponent},
   {path: 'quizform', component: QuizFormComponent},
   {path: 'quiz', component: QuizComponent},
-  {path: 'edit/:id', component: QuestionFormComponent},
   {path: 'edit', component: EditQuizComponent},
+  {path: '', redirectTo: '/welcomepage', pathMatch: 'full'},
+  {path: 'edit/:id', component: QuestionFormComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'userquiz', component: UserQuizListComponent},
   {path: 'welcomepage', component: WelcomePageComponent},
-  {path: '', redirectTo: '/welcomepage', pathMatch: 'full'},
 ];
 
 @NgModule({
